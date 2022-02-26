@@ -1,2 +1,2 @@
 # 3dcv
-3DCV Project
+Project in 3D Computer Vision
