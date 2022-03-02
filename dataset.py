@@ -47,13 +47,18 @@ class AutonomousDrivingDataset(Dataset):
         return sixD_coords
         
     def __getitem__(self, idx):
+        '''Returns an Tensor-Image - Tensor-6d-coordinates pair.
+            args:  
+                idx         :   [int]       index of the instance
+        '''
         if torch.is_tensor(idx):
             idx     = idx.tolist()
         
         img_path    = os.path.join(self.image_path, self.prediction_frame.iloc[idx, 0] + ".jpg")
+        
         y           = self.string2sixD(self.prediction_frame.iloc[idx, 1])
+        
         X           = Image.open(img_path)
-
         if not self.transform is None:
             X           = self.transform(X)
 
