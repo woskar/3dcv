@@ -3,11 +3,15 @@ Project in 3D Computer Vision
 
 ## Folders
 
-**configs**: Contains a configuration file to store hyperparams and paths ... 
+**configs**: Contains configuration files to store hyperparams and paths ... 
 
 **data**: Contains the data ("data/pku-autonomous-driving/...")
 
 **weights**: Store trained weights here
+
+**files**: Store utilized files here
+
+**utils**: Utilized stuff
 
 
 ## Files
@@ -16,8 +20,18 @@ Project in 3D Computer Vision
 
 **demo.py**: Executes a demo of our trained network 
 
-**functions.py**: Store all kinds of helper functions here
+**utils/functions.py**: Store all kinds of helper functions here
 
-**network.py**: Contains the main network
+**cfg.py**: Contains some code, needed for the creation of the encoder
 
-**networkFunctions.py**: Contains the training and testing code
+**CNNFunctions.py**: Contains the training/evaluation loops
+
+**correspondenceNet.py**: Contains the combined CNN correspondence network
+
+**decoder**:Contains the CNN decoder
+
+**encoder.py**: Contains the CNN encoder
+
+**testFile.py**: Contains some example code
+
+**trainCNN.py**: (Entry point) Contains the training code for the correspondence network
